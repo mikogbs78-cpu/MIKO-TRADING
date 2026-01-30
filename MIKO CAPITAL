@@ -92,7 +92,7 @@ function initializeApp() {
         }
         
         // Load saved theme
-        const savedTheme = localStorage.getItem('fxTaeTheme') || 'light';
+        const savedTheme = localStorage.getItem('fxMikoTheme') || 'light';
         setTheme(savedTheme);
         
         console.log('Dashboard initialized successfully!');
