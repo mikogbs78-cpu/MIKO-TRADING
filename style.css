@@ -302,8 +302,8 @@ body.landing-page {
     color: var(--text-secondary);
 }
 
-/* FX Tae Section */
-.fx-tae-section {
+/* FX MIKO Section */
+.fx-miko-section {
     background: var(--bg-card);
     padding: 2rem;
     border-radius: 16px;
@@ -312,7 +312,7 @@ body.landing-page {
     box-shadow: var(--shadow);
 }
 
-.fx-tae-section h3 {
+.fx-miko-section h3 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
     color: var(--primary);
@@ -321,7 +321,7 @@ body.landing-page {
     gap: 0.5rem;
 }
 
-.fx-tae-section p {
+.fx-miko-section p {
     color: var(--text-secondary);
     line-height: 1.7;
     margin-bottom: 1.5rem;
