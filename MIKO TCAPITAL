@@ -55,7 +55,7 @@ function simulateLoading() {
 
 // ===== INITIALIZATION =====
 function initializeApp() {
-    console.log('Initializing FX Tae Trading Dashboard...');
+    console.log('Initializing MIKO TRADING CIRCLE Dashboard...');
     
     try {
         // Load user data
