@@ -106,7 +106,7 @@ function initializeApp() {
 
 function loadUserData() {
     try {
-        const currentUser = JSON.parse(localStorage.getItem('fxTaeCurrentUser') || '{}');
+        const currentUser = JSON.parse(localStorage.getItem('fxMikoCurrentUser') || '{}');
         if (currentUser.name) {
             const userNameElement = document.getElementById('userName');
             const userEmailElement = document.getElementById('userEmail');
@@ -121,7 +121,7 @@ function loadUserData() {
 
 function loadTrades() {
     try {
-        const savedTrades = localStorage.getItem('fxTaeTrades');
+        const savedTrades = localStorage.getItem('fxMikoTrades');
         if (savedTrades) {
             trades = JSON.parse(savedTrades);
             console.log(`Loaded ${trades.length} trades from storage`);
@@ -137,7 +137,7 @@ function loadTrades() {
 
 function loadDreams() {
     try {
-        const savedDreams = localStorage.getItem('fxTaeDreams');
+        const savedDreams = localStorage.getItem('fxMikoDreams');
         if (savedDreams) {
             dreams = JSON.parse(savedDreams);
             console.log(`Loaded ${dreams.length} dreams from storage`);
@@ -153,8 +153,8 @@ function loadDreams() {
 
 function loadAccountBalance() {
     try {
-        const savedBalance = localStorage.getItem('fxTaeAccountBalance');
-        const savedStartingBalance = localStorage.getItem('fxTaeStartingBalance');
+        const savedBalance = localStorage.getItem('fxMikoAccountBalance');
+        const savedStartingBalance = localStorage.getItem('fxMikoStartingBalance');
         
         if (savedBalance) accountBalance = parseFloat(savedBalance);
         if (savedStartingBalance) startingBalance = parseFloat(savedStartingBalance);
@@ -171,7 +171,7 @@ function loadAccountBalance() {
 
 function saveTrades() {
     try {
-        localStorage.setItem('fxTaeTrades', JSON.stringify(trades));
+        localStorage.setItem('fxMikoTrades', JSON.stringify(trades));
         console.log(`Saved ${trades.length} trades`);
     } catch (error) {
         console.error('Error saving trades:', error);
@@ -181,7 +181,7 @@ function saveTrades() {
 
 function saveDreams() {
     try {
-        localStorage.setItem('fxTaeDreams', JSON.stringify(dreams));
+        localStorage.setItem('fxMikoDreams', JSON.stringify(dreams));
         console.log(`Saved ${dreams.length} dreams`);
     } catch (error) {
         console.error('Error saving dreams:', error);
@@ -191,8 +191,8 @@ function saveDreams() {
 
 function saveAccountBalance() {
     try {
-        localStorage.setItem('fxTaeAccountBalance', accountBalance.toString());
-        localStorage.setItem('fxTaeStartingBalance', startingBalance.toString());
+        localStorage.setItem('fxMikoAccountBalance', accountBalance.toString());
+        localStorage.setItem('fxMikoStartingBalance', startingBalance.toString());
         console.log(`Saved account balance: ${accountBalance}`);
     } catch (error) {
         console.error('Error saving account balance:', error);
@@ -212,7 +212,7 @@ function updateCurrentDate() {
 }
 
 function updateUserInfo() {
-    const currentUser = JSON.parse(localStorage.getItem('fxTaeCurrentUser') || '{}');
+    const currentUser = JSON.parse(localStorage.getItem('fxMikoCurrentUser') || '{}');
     if (currentUser.name) {
         const userNameElement = document.getElementById('userName');
         const userEmailElement = document.getElementById('userEmail');
@@ -1816,7 +1816,7 @@ PROFESSIONAL TRADING DASHBOARD REPORT
 
 DASHBOARD SNAPSHOT:
 Report Date: ${new Date().toLocaleDateString()}
-Account Name: ${JSON.parse(localStorage.getItem('fxTaeCurrentUser') || '{}').name || 'Trader'}
+Account Name: ${JSON.parse(localStorage.getItem('fxMikoCurrentUser') || '{}').name || 'Trader'}
 Trading Period: Active
 
 ACCOUNT OVERVIEW:
